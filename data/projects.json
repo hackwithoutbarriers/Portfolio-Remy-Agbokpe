@@ -7,8 +7,8 @@
     "technologies": ["Python", "Flask", "HTML5", "CSS3", "JavaScript", "Bootstrap"],
     "image": "img/projects/portfolio-flask.jpg",
     "thumbnail": "img/projects/thumbnails/portfolio-flask-thumb.jpg",
-    "live_link": "https://votreportfolio.com",
-    "github_link": "https://github.com/votreusername/portfolio-flask",
+    "live_link": "https://remyagbokpe.onrender.com/",
+    "github_link": "#",
     "completion_date": "2024-01-15",
     "status": "completed",
     "features": [
@@ -29,7 +29,7 @@
     "image": "img/projects/ecommerce-app.jpg",
     "thumbnail": "img/projects/thumbnails/ecommerce-app-thumb.jpg",
     "live_link": "#",
-    "github_link": "https://github.com/votreusername/data-visualization-app",
+    "github_link": " ",
     "completion_date": "2023-11-30",
     "status": "completed"
   },
@@ -41,8 +41,8 @@
     "technologies": ["Python", "Flask", "HTML5", "CSS3", "JavaScript", "Bootstrap"],
     "image": "img/projects/portfolio-flask.jpg",
     "thumbnail": "img/projects/thumbnails/portfolio-flask-thumb.jpg",
-    "live_link": "https://votreportfolio.com",
-    "github_link": "https://github.com/votreusername/portfolio-flask",
+    "live_link": "https://remyagbokpe.onrender.com/",
+    "github_link": "#",
     "completion_date": "2024-01-15",
     "status": "completed",
     "features": [
@@ -63,7 +63,7 @@
     "image": "img/projects/ecommerce-app.jpg",
     "thumbnail": "img/projects/thumbnails/ecommerce-app-thumb.jpg",
     "live_link": "#",
-    "github_link": "https://github.com/votreusername/data-visualization-app",
+    "github_link": "#",
     "completion_date": "2023-11-30",
     "status": "completed"
   },
@@ -75,8 +75,8 @@
     "technologies": ["Python", "Flask", "HTML5", "CSS3", "JavaScript", "Bootstrap"],
     "image": "img/projects/portfolio-flask.jpg",
     "thumbnail": "img/projects/thumbnails/portfolio-flask-thumb.jpg",
-    "live_link": "https://votreportfolio.com",
-    "github_link": "https://github.com/votreusername/portfolio-flask",
+    "live_link": "https://remyagbokpe.onrender.com/",
+    "github_link": "#",
     "completion_date": "2024-01-15",
     "status": "completed",
     "features": [
@@ -97,7 +97,7 @@
     "image": "img/projects/ecommerce-app.jpg",
     "thumbnail": "img/projects/thumbnails/ecommerce-app-thumb.jpg",
     "live_link": "#",
-    "github_link": "https://github.com/votreusername/data-visualization-app",
+    "github_link": "#",
     "completion_date": "2023-11-30",
     "status": "completed"
   }
