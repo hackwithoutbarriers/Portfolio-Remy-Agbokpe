@@ -15,30 +15,6 @@
   <meta property="og:description"
     content="Développeur passionné par la cybersécurité. Expertise en développement web sécurisé et préparation au Bootcamp Métana Cybersécurité." />
 
-  <!-- Schema.org structured data for Cybersecurity Professional -->
-  <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Remy A. AGBOKPE",
-        "jobTitle": "Développeur en Spécialisation Cybersécurité",
-        "description": "Développeur web se spécialisant en cybersécurité avec une expertise en développement sécurisé et préparation au Bootcamp Métana",
-        "url": "https://remyagbokpe.onrender.com",
-        "knowsAbout": [
-          "Développement Web Sécurisé",
-          "Python Security",
-          "Ethical Hacking",
-          "Pentesting",
-          "OWASP Top 10",
-          "Network Security"
-        ],
-        "memberOf": {
-          "@type": "Organization",
-          "name": "Métana Bootcamp Cybersécurité"
-        }
-      }
-    </script>
-
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ request.url }}" />
@@ -57,6 +33,12 @@
   <meta property="twitter:description"
     content="{% block twitter_description %}Portfolio de Remy A. AGBOKPE - Développeur web passionné par la création de solutions numériques et la cybersécurité.{% endblock %}" />
   <meta property="twitter:image" content="{{ url_for('static', filename='images/twitter-image.jpg') }}" />
+
+  <!-- Meta tags pour mobile -->
+  <meta name="apple-mobile-web-app-title" content="Remy AGBOKPE">
+  <meta name="application-name" content="Remy AGBOKPE">
+  <meta name="msapplication-TileColor" content="#14b866">
+  <meta name="theme-color" content="#14b866">
 
   <!-- Autres balises importantes -->
   <link rel="canonical" href="{{ request.url }}" />
@@ -84,6 +66,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZV1DB3GSCJ"></script>
+  <!-- Schema.org structured data for Cybersecurity Professional -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Remy A. AGBOKPE",
+        "jobTitle": "Développeur en Spécialisation Cybersécurité",
+        "description": "Développeur web se spécialisant en cybersécurité avec une expertise en développement sécurisé et préparation au Bootcamp Métana",
+        "url": "https://remyagbokpe.onrender.com",
+        "knowsAbout": [
+          "Développement Web Sécurisé",
+          "Python Security",
+          "Ethical Hacking",
+          "Pentesting",
+          "OWASP Top 10",
+          "Network Security"
+        ],
+        "memberOf": {
+          "@type": "Organization",
+          "name": "Métana Bootcamp Cybersécurité"
+        }
+      }
+  </script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
