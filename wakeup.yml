@@ -1,0 +1,14 @@
+name: Wakeup Render
+on:
+  schedule:
+    - cron: '*/14 * * * *'  # Toutes les 14 minutes
+  workflow_dispatch:
+
+jobs:
+  wakeup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render
+        run: |
+          curl -s -o /dev/null -w "Status: %{http_code}" https://remyagbokpe.onrender.com
+          echo " - Wakeup done at $(date)"

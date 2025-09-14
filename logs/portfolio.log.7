@@ -1,0 +1,82 @@
+2025-09-09 21:55:10,853 ERROR: Exception on /about [GET] [in C:\Users\DG\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\app.py:1414]
+Traceback (most recent call last):
+  File "C:\Users\DG\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\DG\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\DG\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\DG\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\DG\Desktop\my-portfolio\app.py", line 97, in about
+    return render_template("about.html")
+  File "C:\Users\DG\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\DG\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DG\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\DG\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\DG\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\DG\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DG\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\DG\Desktop\my-portfolio\templates\about.html", line 15, in template
+    <img src="{{ url_for('static', filename='images/passeport.jpg') }" alt="Photo de Remy A. AGBOKPE" class="rounded-circle bio-img">
+    ^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: unexpected '}'
+2025-09-09 21:55:11,093 ERROR: Erreur 500: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application. [in C:\Users\DG\Desktop\my-portfolio\app.py:254]
+2025-09-09 22:00:10,612 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:31]
+2025-09-09 22:36:29,718 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:31]
+2025-09-09 22:41:51,265 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:31]
+2025-09-09 22:46:12,500 INFO: Nouveau message de Ablamvi Agbokpe (agbokpeablamvi@gmail.com) [in C:\Users\DG\Desktop\my-portfolio\app.py:142]
+2025-09-09 22:47:04,406 INFO: Connexion admin réussie [in C:\Users\DG\Desktop\my-portfolio\app.py:167]
+2025-09-09 22:55:59,751 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:31]
+2025-09-09 23:02:01,152 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:31]
+2025-09-09 23:08:02,159 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:31]
+2025-09-09 23:09:55,693 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:31]
+2025-09-10 00:06:14,842 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:31]
+2025-09-10 00:16:43,076 WARNING: Tentative de connexion admin échouée [in C:\Users\DG\Desktop\my-portfolio\app.py:171]
+2025-09-10 00:16:59,245 INFO: Connexion admin réussie [in C:\Users\DG\Desktop\my-portfolio\app.py:167]
+2025-09-10 00:17:58,751 INFO: Déconnexion admin [in C:\Users\DG\Desktop\my-portfolio\app.py:244]
+2025-09-10 09:16:59,198 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:31]
+2025-09-10 10:12:03,502 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:31]
+2025-09-10 14:21:05,665 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:31]
+2025-09-10 14:22:54,314 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:31]
+2025-09-10 14:24:58,057 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:31]
+2025-09-10 14:34:00,527 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:31]
+2025-09-10 14:36:09,945 INFO: Nouveau message de Ablamvi Agbokpe (agbokpeablamvi@gmail.com) [in C:\Users\DG\Desktop\my-portfolio\app.py:142]
+2025-09-10 14:58:40,685 INFO: Connexion admin réussie [in C:\Users\DG\Desktop\my-portfolio\app.py:167]
+2025-09-10 14:58:58,092 INFO: Tous les messages ont été effacés [in C:\Users\DG\Desktop\my-portfolio\app.py:232]
+2025-09-10 15:02:55,043 INFO: Déconnexion admin [in C:\Users\DG\Desktop\my-portfolio\app.py:244]
+2025-09-10 15:03:34,990 WARNING: Tentative de connexion admin échouée [in C:\Users\DG\Desktop\my-portfolio\app.py:171]
+2025-09-10 15:03:55,196 WARNING: Tentative de connexion admin échouée [in C:\Users\DG\Desktop\my-portfolio\app.py:171]
+2025-09-10 15:04:16,081 WARNING: Tentative de connexion admin échouée [in C:\Users\DG\Desktop\my-portfolio\app.py:171]
+2025-09-10 15:05:02,905 WARNING: MOT DE PASSE RÉINITIALISÉ: xPUgXxbAvCnXEhEr [in C:\Users\DG\Desktop\my-portfolio\app.py:191]
+2025-09-10 15:05:14,718 INFO: Connexion admin réussie [in C:\Users\DG\Desktop\my-portfolio\app.py:167]
+2025-09-10 15:05:31,039 INFO: Nouveau message de Ablamvi Agbokpe (agbokpeablamvi@gmail.com) [in C:\Users\DG\Desktop\my-portfolio\app.py:142]
+2025-09-10 15:37:51,870 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:31]
+2025-09-10 21:45:22,990 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:31]
+2025-09-11 03:15:42,891 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:31]
+2025-09-11 03:22:44,098 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:31]
+2025-09-11 03:25:29,190 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:31]
+2025-09-11 04:21:13,695 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:37]
+2025-09-11 04:26:22,402 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:37]
+2025-09-11 04:41:11,504 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:37]
+2025-09-11 12:52:25,946 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:37]
+2025-09-11 13:03:49,834 INFO: Nouveau message de Ablamvi Agbokpe (agbokpeablamvi@gmail.com) [in C:\Users\DG\Desktop\my-portfolio\app.py:149]
+2025-09-11 13:44:00,567 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:37]
+2025-09-11 13:59:51,411 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:37]
+2025-09-11 14:20:24,533 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:37]
+2025-09-11 15:55:04,514 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:37]
+2025-09-11 16:22:39,735 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:37]
+2025-09-11 19:59:39,023 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:37]
+2025-09-11 20:23:20,436 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:37]
+2025-09-11 20:33:35,107 INFO: Portfolio startup [in C:\Users\DG\Desktop\my-portfolio\app.py:37]

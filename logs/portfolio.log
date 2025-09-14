@@ -1,0 +1,84 @@
+2025-09-12 00:43:36,894 ERROR: Exception on /about [GET] [in C:\Users\HWB\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:1414]
+Traceback (most recent call last):
+  File "C:\Users\HWB\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\HWB\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\HWB\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\HWB\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\HWB\Desktop\my-portfolio\app.py", line 104, in about
+    return render_template("about.html")
+  File "C:\Users\HWB\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\HWB\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HWB\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\HWB\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\HWB\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\HWB\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HWB\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\HWB\Desktop\my-portfolio\templates\about.html", line 309, in template
+    {% block title %}À propos - Portfolio de Remy A. AGBOKPE{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateAssertionError: block 'title' defined twice
+2025-09-12 00:43:36,995 ERROR: Erreur 500: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application. [in C:\Users\HWB\Desktop\my-portfolio\app.py:313]
+2025-09-12 00:50:21,781 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-12 00:52:39,152 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-12 02:04:35,057 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-12 02:35:47,331 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-12 03:34:08,483 INFO: Connexion admin réussie [in C:\Users\HWB\Desktop\my-portfolio\app.py:171]
+2025-09-12 10:24:47,319 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-12 11:39:15,901 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-12 11:59:56,718 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-12 13:41:23,868 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-12 14:28:49,427 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-12 14:55:45,235 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-12 16:00:12,227 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-12 19:57:15,283 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 12:25:45,619 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 12:33:08,845 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 14:10:12,135 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 14:46:57,488 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 15:58:48,266 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 16:36:22,649 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 16:46:26,650 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 16:48:36,875 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 17:55:30,408 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 17:57:42,683 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 18:40:00,716 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 18:43:54,432 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 18:49:11,962 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 19:06:50,769 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 19:07:24,165 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 19:24:18,419 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 19:38:09,063 INFO: Connexion admin réussie [in C:\Users\HWB\Desktop\my-portfolio\app.py:171]
+2025-09-13 19:40:08,657 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 19:40:35,402 INFO: Connexion admin réussie [in C:\Users\HWB\Desktop\my-portfolio\app.py:171]
+2025-09-13 19:43:48,397 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 19:56:32,933 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 21:21:14,963 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 21:25:53,042 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 21:39:31,969 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 21:44:49,133 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 21:46:46,245 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 21:52:28,615 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 21:56:07,172 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 22:01:13,029 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 22:07:34,304 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 22:10:35,430 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 22:12:01,807 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 22:12:48,905 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 23:06:55,272 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 23:44:56,195 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-13 23:46:06,530 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]

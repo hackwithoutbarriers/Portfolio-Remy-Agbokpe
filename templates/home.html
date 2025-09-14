@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Accueil - Portfolio de Remy A. AGBOKPE{% endblock %}
+{% block description %}Bienvenue sur le portfolio de Remy A. AGBOKPE, développeur web spécialisé en création
+d'applications modernes et solutions de cybersécurité.{% endblock %}
+
+{% block content %}
+<main>
+  <header class="home-section fade-in" role="banner">
+    <h1 class="display-3 fw-bold rainbow-text">Bienvenue sur mon portfolio</h1>
+    <p class="lead animated-text mb-5">Découvrez mon parcours, mes compétences et mes projets. Naviguez via le menu !
+    </p>
+    <div aria-label="Navigation principale">
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="{{ url_for('about') }}" class="btn btn-primary btn-lg animate-btn">Bio</a>
+        <a href="{{ url_for('projects') }}" class="btn btn-success btn-lg animate-btn">Projets</a>
+        <a href="{{ url_for('contact') }}" class="btn btn-warning btn-lg animate-btn">Contact</a>
+      </div>
+    </div>
+  </header>
+</main>
+{% endblock %}

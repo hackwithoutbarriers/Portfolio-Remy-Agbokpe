@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Contact - Portfolio{% endblock %}
+{% block content %}
+<section class="fade-in">
+  <div class="contact-container">
+    <h2 class="text-center">Contactez-moi</h2>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-success slide-in mt-3" role="alert">{{ message }}</div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <form method="POST" id="contactForm" class="mt-4">
+      <div class="mb-3">
+        <input type="text" name="name" class="form-control" placeholder="Votre nom" required>
+      </div>
+      <div class="mb-3">
+        <input type="email" name="email" class="form-control" placeholder="Votre email" required>
+      </div>
+      <div class="mb-3">
+        <textarea name="message" class="form-control" rows="5" placeholder="Votre message" required></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-success btn-lg animate-btn" style="width:100%">Envoyer</button>
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock %}

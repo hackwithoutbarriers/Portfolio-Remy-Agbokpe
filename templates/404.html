@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Page non trouvée - Portfolio{% endblock %}
+{% block content %}
+<div class="container text-center py-5">
+    <h1>404</h1>
+    <p>La page que vous recherchez n'existe pas.</p>
+    <a href="{{ url_for('home') }}" class="btn btn-primary">Retour à l'accueil</a>
+</div>
+{% endblock %}

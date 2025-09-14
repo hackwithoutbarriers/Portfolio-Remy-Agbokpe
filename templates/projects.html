@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block title %}Projets - Portfolio de Remy A. AGBOKPE{% endblock %}
+{% block description %}Découvrez les projets de développement web de Remy A. AGBOKPE, incluant des applications
+e-commerce, mobiles et solutions d'analyse de données.{% endblock %}
+
+{% block content %}
+<main class="main-content">
+  <article class="fade-in container page-content">
+    <header>
+      <h1 class="text-center display-5 fw-bold">Mes projets</h1>
+    </header>
+
+    <!-- Boutons de filtre -->
+    <div aria-label="Filtrage des projets" class="text-center">
+      <button class="btn filter-btn active" data-filter="all">Tous</button>
+      <button class="btn filter-btn" data-filter="web">Web</button>
+      <button class="btn filter-btn" data-filter="mobile">Mobile</button>
+      <button class="btn filter-btn" data-filter="data">Data</button>
+    </div>
+    <!-- Galerie de projets -->
+    <section class="row g-4 project-gallery global-padding" aria-label="Liste des projets">
+      {% for project in projects %}
+      <div class="col-md-6 col-lg-4 project-item {{ project.category }}">
+        <div class="card project-card h-100 shadow-sm animate-card">
+          <div class="project-image">
+            <img src="{{ url_for('static', filename=project.image) }}" class="card-img-top lightbox-trigger"
+              alt="Capture d'écran de {{ project.title }}" data-title="{{ project.title }}"
+              onerror="handleImageError(this)">
+          </div>
+          <div class="card-body text-center">
+            <h2 class="card-title fw-bold h5">{{ project.title }}</h2>
+            <p class="card-text small text-muted">{{ project.description }}</p>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+              {% if project.live_link and project.live_link != '#' %}
+              <a href="{{ project.live_link }}" class="btn project-btn">Voir le projet</a>
+              {% endif %}
+              {% if project.github_link %}
+              <a href="{{ project.github_link }}" target="_blank" class="btn project-btn">
+                Code GitHub
+              </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% else %}
+      <div class="col-12 text-center">
+        <p class="text-muted">Aucun projet à afficher pour le moment.</p>
+      </div>
+      {% endfor %}
+    </section>
+  </article>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div id="lightbox-caption"></div>
+  </div>
+</main>
+
+<script>
+  function handleImageError(img) {
+    // Utiliser un placeholder local ou en ligne
+    const placeholder = "{{ url_for('static', filename='img/placeholder.jpg') }}";
+    img.src = placeholder || 'https://via.placeholder.com/400x300/14b866/ffffff?text=Image+Non+Disponible';
+    img.onerror = null; // Empêche les boucles infinies
+  }
+
+  // Vérifier si l'image placeholder existe, sinon utiliser un service en ligne
+  function checkPlaceholder() {
+    const placeholderUrl = "{{ url_for('static', filename='img/placeholder.jpg') }}";
+    const testImg = new Image();
+    testImg.onload = function () {
+      console.log('Placeholder image is available');
+    };
+    testImg.onerror = function () {
+      console.warn('Placeholder image not found, using online service');
+      // Vous pouvez créer l'image placeholder automatiquement
+      createPlaceholderImage();
+    };
+    testImg.src = placeholderUrl;
+  }
+
+  // Fonction pour créer une image placeholder si elle n'existe pas
+  function createPlaceholderImage() {
+    // Cette fonction pourrait être implémentée si besoin
+    console.log('Placeholder creation would happen here');
+  }
+
+  // Vérifier au chargement de la page
+  document.addEventListener('DOMContentLoaded', function () {
+    checkPlaceholder();
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,170 @@
+{% extends "base.html" %} {% block title %}À propos - Portfolio de Remy A.
+AGBOKPE{% endblock %} {% block description %}Découvrez le parcours académique et
+professionnel de Remy A. AGBOKPE, développeur web passionné par les solutions
+numériques et la cybersécurité.{% endblock %} {% block content %}
+<article class="main-content">
+  <!-- Hero Section -->
+  <section class="about-hero container page-content" >
+    <div class="">
+      <header class="text-center fade-in">
+        <h1 class="display-4 fw-bold text-primary mb-3">À propos de moi</h1>
+        <p class="lead text-muted">
+          Développeur web passionné par la cybersécurité
+        </p>
+        <div class="divider mx-auto"></div>
+      </header>
+
+      <!-- Bio Section -->
+      <div class="row align-items-center">
+        <div class="col-lg-4 text-center mb-lg-0">
+          <div class="profile-image-container">
+            <img
+              src="{{ url_for('static', filename='images/passeport.JPG') }}"
+              alt="Photo de Remy A. AGBOKPE"
+              class="profile-img rounded-circle"
+              onerror="this.onerror=null; this.src='https://via.placeholder.com/300x300/14b866/ffffff?text=Remy+A.+AGBOKPE'"
+            />
+            <div class="img-overlay"></div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="bio-card p-4 shadow-sm rounded">
+            <h2 class="h3 mb-4">Bonjour, Je suis Remy A. AGBOKPE</h2>
+            <div class="bio-content">
+              <p class="mb-3">
+                Je suis Ablamvi AGBOKPE, connu comme Remy. Passionné par la
+                technologie et les langues, j'ai évolué entre assistant
+                utilisateur, la saisie de données et enseignement.
+              </p>
+              <p class="mb-4">
+                Mon objectif est clair : devenir analyste cybersécurité et
+                protéger ce qui compte. Je me spécialise dans le développement
+                web sécurisé et la protection des applications contre les
+                cybermenaces.
+              </p>
+            </div>
+            <div class="bio-actions mt-4">
+              <a href="{{ url_for('contact') }}" class="btn btn-primary me-3">
+                <i class="fas fa-envelope me-2"></i> Me contacter
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="fas fa-download me-2"></i> Télécharger mon CV
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="timeline-section bg-light container">
+    <div class="">
+      <h2 class="text-center">Mon parcours académique</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-badge"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2025</div>
+            <h3>Bootcamp Cybersécurité</h3>
+            <div class="timeline-institution">Metana</div>
+            <p>
+              Spécialisation en cybersécurité et développement web avancé.
+              Apprentissage des techniques de sécurisation d'applications et de
+              prévention des intrusions.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-badge"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2024</div>
+            <h3>Formation en développement web & mobile</h3>
+            <div class="timeline-institution">ADN-Golfe 1</div>
+            <p>
+              Formation intensive aux technologies modernes de développement web
+              et mobile. Acquisition des compétences front-end et back-end.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-badge"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2022</div>
+            <h3>Licence en Anglais</h3>
+            <div class="timeline-institution">Université de Lomé</div>
+            <p>
+              Études approfondies de la littérature et civilisation britannique.
+              Développement de compétences linguistiques avancées.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills-section container">
+    <div class="">
+      <h2 class="text-center">Mes compétences</h2>
+
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="skill-card text-center p-4 h-100 shadow-sm rounded">
+            <div class="skill-icon mb-3">
+              <i class="fas fa-code text-primary"></i>
+            </div>
+            <h3 class="h4 mb-3">Développement Web</h3>
+            <p class="text-muted">
+              HTML5, CSS3, JavaScript, Python, Django, React, Node.js
+            </p>
+            <div class="skill-tags mt-3">
+              <span class="badge bg-light text-dark me-1">Frontend</span>
+              <span class="badge bg-light text-dark me-1">Backend</span>
+              <span class="badge bg-light text-dark">Fullstack</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="skill-card text-center p-4 h-100 shadow-sm rounded">
+            <div class="skill-icon mb-3">
+              <i class="fas fa-shield-alt text-primary"></i>
+            </div>
+            <h3 class="h4 mb-3">Cybersécurité</h3>
+            <p class="text-muted">
+              Sécurité des applications, bonnes pratiques OWASP, tests
+              d'intrusion, chiffrement
+            </p>
+            <div class="skill-tags mt-3">
+              <span class="badge bg-light text-dark me-1">Sécurité Web</span>
+              <span class="badge bg-light text-dark me-1">Pentesting</span>
+              <span class="badge bg-light text-dark">Cryptographie</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="skill-card text-center p-4 h-100 shadow-sm rounded">
+            <div class="skill-icon mb-3">
+              <i class="fas fa-language text-primary"></i>
+            </div>
+            <h3 class="h4 mb-3">Langues</h3>
+            <p class="text-muted">
+              Anglais (courant), Français (courant), Langues locales
+            </p>
+            <div class="skill-tags mt-3">
+              <span class="badge bg-light text-dark me-1">Traduction</span>
+              <span class="badge bg-light text-dark me-1">Communication</span>
+              <span class="badge bg-light text-dark">Enseignement</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+{% endblock %}
