@@ -29,7 +29,7 @@ Traceback (most recent call last):
   File "C:\Users\HWB\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
     raise rewrite_traceback_stack(source=source)
   File "C:\Users\HWB\Desktop\my-portfolio\templates\about.html", line 309, in template
-    {% block title %}À propos - Portfolio de Remy A. AGBOKPE{% endblock %}
+    {% block title %}ï¿½ propos - Portfolio dRemy Ablamvi AGBOKPEPE{% endblock %}
     ^^^^^^^^^^^^^^^^^^^^^^^^
 jinja2.exceptions.TemplateAssertionError: block 'title' defined twice
 2025-09-12 00:43:36,995 ERROR: Erreur 500: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application. [in C:\Users\HWB\Desktop\my-portfolio\app.py:313]
@@ -37,7 +37,7 @@ jinja2.exceptions.TemplateAssertionError: block 'title' defined twice
 2025-09-12 00:52:39,152 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
 2025-09-12 02:04:35,057 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
 2025-09-12 02:35:47,331 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
-2025-09-12 03:34:08,483 INFO: Connexion admin réussie [in C:\Users\HWB\Desktop\my-portfolio\app.py:171]
+2025-09-12 03:34:08,483 INFO: Connexion admin rï¿½ussie [in C:\Users\HWB\Desktop\my-portfolio\app.py:171]
 2025-09-12 10:24:47,319 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
 2025-09-12 11:39:15,901 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
 2025-09-12 11:59:56,718 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
@@ -62,9 +62,9 @@ jinja2.exceptions.TemplateAssertionError: block 'title' defined twice
 2025-09-13 19:06:50,769 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
 2025-09-13 19:07:24,165 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
 2025-09-13 19:24:18,419 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
-2025-09-13 19:38:09,063 INFO: Connexion admin réussie [in C:\Users\HWB\Desktop\my-portfolio\app.py:171]
+2025-09-13 19:38:09,063 INFO: Connexion admin rï¿½ussie [in C:\Users\HWB\Desktop\my-portfolio\app.py:171]
 2025-09-13 19:40:08,657 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
-2025-09-13 19:40:35,402 INFO: Connexion admin réussie [in C:\Users\HWB\Desktop\my-portfolio\app.py:171]
+2025-09-13 19:40:35,402 INFO: Connexion admin rï¿½ussie [in C:\Users\HWB\Desktop\my-portfolio\app.py:171]
 2025-09-13 19:43:48,397 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
 2025-09-13 19:56:32,933 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
 2025-09-13 21:21:14,963 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
@@ -82,3 +82,24 @@ jinja2.exceptions.TemplateAssertionError: block 'title' defined twice
 2025-09-13 23:06:55,272 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
 2025-09-13 23:44:56,195 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
 2025-09-13 23:46:06,530 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-14 01:00:49,305 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-14 01:10:41,524 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-14 01:21:08,012 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-14 01:34:04,756 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-14 01:37:01,243 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-14 19:23:34,904 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-14 19:32:06,981 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-14 19:34:12,610 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-14 19:36:04,858 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-14 19:38:02,182 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-14 19:50:18,277 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-14 20:21:43,253 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-14 20:31:03,338 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-14 20:33:01,611 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-14 20:33:59,237 INFO: Nouveau message de Ablamvi Agbokpe (agbokpeablamvi@gmail.com) [in C:\Users\HWB\Desktop\my-portfolio\app.py:146]
+2025-09-14 20:34:16,351 INFO: Connexion admin réussie [in C:\Users\HWB\Desktop\my-portfolio\app.py:171]
+2025-09-14 20:37:48,689 INFO: Déconnexion admin [in C:\Users\HWB\Desktop\my-portfolio\app.py:248]
+2025-09-14 20:38:33,359 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-14 20:43:35,595 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-14 20:48:47,759 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
+2025-09-14 20:58:24,459 INFO: Portfolio startup [in C:\Users\HWB\Desktop\my-portfolio\app.py:37]
