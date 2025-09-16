@@ -32,12 +32,7 @@ e-commerce, mobiles et solutions d'analyse de données.{% endblock %}
             <p class="card-text small text-muted">{{ project.description }}</p>
             <div class="d-flex flex-wrap justify-content-center gap-2">
               {% if project.live_link and project.live_link != '#' %}
-              <a href="{{ project.live_link }}" class="btn project-btn">Voir le projet</a>
-              {% endif %}
-              {% if project.github_link %}
-              <a href="{{ project.github_link }}" target="_blank" class="btn project-btn">
-                Code GitHub
-              </a>
+              <a href="{{ project.live_link }}" class="btn project-btn" target="_blank">Voir le projet</a>
               {% endif %}
             </div>
           </div>
