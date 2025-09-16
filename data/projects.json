@@ -7,9 +7,8 @@
     "technologies": ["Python", "Flask", "HTML5", "CSS3", "JavaScript", "Bootstrap"],
     "image": "img/projects/portfolio-flask.jpg",
     "thumbnail": "img/projects/thumbnails/portfolio-flask-thumb.jpg",
-    "live_link": "https://votreportfolio.com",
-    "github_link": "https://github.com/votreusername/portfolio-flask",
-    "completion_date": "2024-01-15",
+    "live_link": "https://remyagbokpe.onrender.com/",
+    "completion_date": "2025-09-10",
     "status": "completed",
     "features": [
       "Design responsive",
@@ -22,28 +21,34 @@
   },
   {
     "id": 2,
-    "title": "Application d'E-commerce",
-    "description": "Plateforme interactive de visualisation de données avec tableaux de bord personnalisables, graphiques dynamiques et export de rapports.",
-    "category": "mobile",
-    "technologies": ["Python", "Pandas", "Matplotlib", "Plotly", "SQL", "JavaScript"],
-    "image": "img/projects/ecommerce-app.jpg",
-    "thumbnail": "img/projects/thumbnails/ecommerce-app-thumb.jpg",
-    "live_link": "#",
-    "github_link": "https://github.com/votreusername/data-visualization-app",
-    "completion_date": "2023-11-30",
-    "status": "completed"
+    "title": "Portfolio Flask",
+    "description": "Site portfolio moderne et responsive développé avec Flask, HTML5, CSS3 et JavaScript. Animations fluides, design élégant et expérience utilisateur optimisée.",
+    "category": "web",
+    "technologies": ["Python", "Flask", "HTML5", "CSS3", "JavaScript", "Bootstrap"],
+    "image": "img/projects/portfolio-flask.jpg",
+    "thumbnail": "img/projects/thumbnails/portfolio-flask-thumb.jpg",
+    "live_link": "https://remyagbokpe.onrender.com/",
+    "completion_date": "2025-09-10",
+    "status": "completed",
+    "features": [
+      "Design responsive",
+      "Animations CSS/JS",
+      "Formulaire de contact",
+      "Filtrage de projets",
+      "Lightbox pour images",
+      "SEO optimisé"
+    ]
   },
   {
     "id": 3,
     "title": "Portfolio Flask",
     "description": "Site portfolio moderne et responsive développé avec Flask, HTML5, CSS3 et JavaScript. Animations fluides, design élégant et expérience utilisateur optimisée.",
-    "category": "data",
+    "category": "web",
     "technologies": ["Python", "Flask", "HTML5", "CSS3", "JavaScript", "Bootstrap"],
     "image": "img/projects/portfolio-flask.jpg",
     "thumbnail": "img/projects/thumbnails/portfolio-flask-thumb.jpg",
-    "live_link": "https://votreportfolio.com",
-    "github_link": "https://github.com/votreusername/portfolio-flask",
-    "completion_date": "2024-01-15",
+    "live_link": "https://remyagbokpe.onrender.com/",
+    "completion_date": "2025-09-10",
     "status": "completed",
     "features": [
       "Design responsive",
@@ -54,31 +59,18 @@
       "SEO optimisé"
     ]
   },
+
   {
     "id": 4,
-    "title": "Application d'E-commerce",
-    "description": "Plateforme interactive de visualisation de données avec tableaux de bord personnalisables, graphiques dynamiques et export de rapports.",
-    "category": "data",
-    "technologies": ["Python", "Pandas", "Matplotlib", "Plotly", "SQL", "JavaScript"],
+    "title": "AraMarket | App e-commerce",
+    "description": "Plateforme interactive d'achat et de vente en cours de dévéloppement. En cliquant sur le lien vous visiterez le prototype réalisé avec Figma. Vos suggestions seront les bienvenues!",
+    "category": "mobile",
+    "technologies": ["Python", "Django", "JavaScript", "React", "SQL"],
     "image": "img/projects/ecommerce-app.jpg",
     "thumbnail": "img/projects/thumbnails/ecommerce-app-thumb.jpg",
-    "live_link": "#",
-    "github_link": "https://github.com/votreusername/data-visualization-app",
+    "live_link": "https://www.figma.com/make/wkR3NMEcN1x2WCO1Q2N1NE/AraShop-Shopping-App?node-id=0-1&t=AHBWfBUz69T4cC6t-1",
     "completion_date": "2023-11-30",
-    "status": "completed"
-  },
-  {
-    "id": 5,
-    "title": "Portfolio Flask",
-    "description": "Site portfolio moderne et responsive développé avec Flask, HTML5, CSS3 et JavaScript. Animations fluides, design élégant et expérience utilisateur optimisée.",
-    "category": "mobile",
-    "technologies": ["Python", "Flask", "HTML5", "CSS3", "JavaScript", "Bootstrap"],
-    "image": "img/projects/portfolio-flask.jpg",
-    "thumbnail": "img/projects/thumbnails/portfolio-flask-thumb.jpg",
-    "live_link": "https://votreportfolio.com",
-    "github_link": "https://github.com/votreusername/portfolio-flask",
-    "completion_date": "2024-01-15",
-    "status": "completed",
+    "status": "On going",
     "features": [
       "Design responsive",
       "Animations CSS/JS",
@@ -88,17 +80,46 @@
       "SEO optimisé"
     ]
   },
+  
   {
-    "id": 6,
-    "title": "Application d'E-commerce",
-    "description": "Plateforme interactive de visualisation de données avec tableaux de bord personnalisables, graphiques dynamiques et export de rapports.",
-    "category": "web",
-    "technologies": ["Python", "Pandas", "Matplotlib", "Plotly", "SQL", "JavaScript"],
+    "id": 5,
+    "title": "AraMarket | App e-commerce",
+    "description": "Plateforme interactive d'achat et de vente en cours de dévéloppement. En cliquant sur le lien vous visiterez le prototype réalisé avec Figma. Vos suggestions seront les bienvenues!",
+    "category": "mobile",
+    "technologies": ["Python", "Django", "JavaScript", "React", "SQL"],
     "image": "img/projects/ecommerce-app.jpg",
     "thumbnail": "img/projects/thumbnails/ecommerce-app-thumb.jpg",
-    "live_link": "#",
-    "github_link": "https://github.com/votreusername/data-visualization-app",
+    "live_link": "https://www.figma.com/make/wkR3NMEcN1x2WCO1Q2N1NE/AraShop-Shopping-App?node-id=0-1&t=AHBWfBUz69T4cC6t-1",
     "completion_date": "2023-11-30",
-    "status": "completed"
+    "status": "On going",
+    "features": [
+      "Design responsive",
+      "Animations CSS/JS",
+      "Formulaire de contact",
+      "Filtrage de projets",
+      "Lightbox pour images",
+      "SEO optimisé"
+    ]
+  },
+  
+  {
+    "id": 5,
+    "title": "AraMarket | App e-commerce",
+    "description": "Plateforme interactive d'achat et de vente en cours de dévéloppement. En cliquant sur le lien vous visiterez le prototype réalisé avec Figma. Vos suggestions seront les bienvenues!",
+    "category": "mobile",
+    "technologies": ["Python", "Django", "JavaScript", "React", "SQL"],
+    "image": "img/projects/ecommerce-app.jpg",
+    "thumbnail": "img/projects/thumbnails/ecommerce-app-thumb.jpg",
+    "live_link": "https://www.figma.com/make/wkR3NMEcN1x2WCO1Q2N1NE/AraShop-Shopping-App?node-id=0-1&t=AHBWfBUz69T4cC6t-1",
+    "completion_date": "2023-11-30",
+    "status": "On going",
+    "features": [
+      "Design responsive",
+      "Animations CSS/JS",
+      "Formulaire de contact",
+      "Filtrage de projets",
+      "Lightbox pour images",
+      "SEO optimisé"
+    ]
   }
 ]
