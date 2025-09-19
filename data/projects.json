@@ -19,57 +19,17 @@
       "SEO optimisé"
     ]
   },
-  {
-    "id": 2,
-    "title": "Portfolio Flask",
-    "description": "Site portfolio moderne et responsive développé avec Flask, HTML5, CSS3 et JavaScript. Animations fluides, design élégant et expérience utilisateur optimisée.",
-    "category": "web",
-    "technologies": ["Python", "Flask", "HTML5", "CSS3", "JavaScript", "Bootstrap"],
-    "image": "img/projects/portfolio-flask.jpg",
-    "thumbnail": "img/projects/thumbnails/portfolio-flask-thumb.jpg",
-    "live_link": "https://remyagbokpe.onrender.com/",
-    "completion_date": "2025-09-10",
-    "status": "completed",
-    "features": [
-      "Design responsive",
-      "Animations CSS/JS",
-      "Formulaire de contact",
-      "Filtrage de projets",
-      "Lightbox pour images",
-      "SEO optimisé"
-    ]
-  },
-  {
-    "id": 3,
-    "title": "Portfolio Flask",
-    "description": "Site portfolio moderne et responsive développé avec Flask, HTML5, CSS3 et JavaScript. Animations fluides, design élégant et expérience utilisateur optimisée.",
-    "category": "web",
-    "technologies": ["Python", "Flask", "HTML5", "CSS3", "JavaScript", "Bootstrap"],
-    "image": "img/projects/portfolio-flask.jpg",
-    "thumbnail": "img/projects/thumbnails/portfolio-flask-thumb.jpg",
-    "live_link": "https://remyagbokpe.onrender.com/",
-    "completion_date": "2025-09-10",
-    "status": "completed",
-    "features": [
-      "Design responsive",
-      "Animations CSS/JS",
-      "Formulaire de contact",
-      "Filtrage de projets",
-      "Lightbox pour images",
-      "SEO optimisé"
-    ]
-  },
 
   {
-    "id": 4,
+    "id": 2,
     "title": "AraMarket | App e-commerce",
-    "description": "Plateforme interactive d'achat et de vente en cours de dévéloppement. En cliquant sur le lien vous visiterez le prototype réalisé avec Figma. Vos suggestions seront les bienvenues!",
+    "description": "Plateforme interactive d'achat et de vente en cours de dévéloppement. Elle servira à mettre en relation les vendeurs et les acheteurs. Vos suggestions seront les bienvenues!",
     "category": "mobile",
     "technologies": ["Python", "Django", "JavaScript", "React", "SQL"],
     "image": "img/projects/ecommerce-app.jpg",
     "thumbnail": "img/projects/thumbnails/ecommerce-app-thumb.jpg",
-    "live_link": "https://www.figma.com/make/wkR3NMEcN1x2WCO1Q2N1NE/AraShop-Shopping-App?node-id=0-1&t=AHBWfBUz69T4cC6t-1",
-    "completion_date": "2023-11-30",
+    "live_link": " ",
+    "completion_date": "",
     "status": "On going",
     "features": [
       "Design responsive",
@@ -82,35 +42,14 @@
   },
   
   {
-    "id": 5,
-    "title": "AraMarket | App e-commerce",
-    "description": "Plateforme interactive d'achat et de vente en cours de dévéloppement. En cliquant sur le lien vous visiterez le prototype réalisé avec Figma. Vos suggestions seront les bienvenues!",
-    "category": "mobile",
-    "technologies": ["Python", "Django", "JavaScript", "React", "SQL"],
-    "image": "img/projects/ecommerce-app.jpg",
+    "id": 3,
+    "title": "DANONTA | Brief",
+    "description": "Ce projet est un brief de validation de compétence lors de ma formation à l'ADN. En cliquant sur le lien ci-dessous, vous visualiserez le prototype.",
+    "category": "graphic",
+    "technologies": ["FIGMA"],
+    "image": "img/projects/danonta.jpg",
     "thumbnail": "img/projects/thumbnails/ecommerce-app-thumb.jpg",
-    "live_link": "https://www.figma.com/make/wkR3NMEcN1x2WCO1Q2N1NE/AraShop-Shopping-App?node-id=0-1&t=AHBWfBUz69T4cC6t-1",
-    "completion_date": "2023-11-30",
-    "status": "On going",
-    "features": [
-      "Design responsive",
-      "Animations CSS/JS",
-      "Formulaire de contact",
-      "Filtrage de projets",
-      "Lightbox pour images",
-      "SEO optimisé"
-    ]
-  },
-  
-  {
-    "id": 5,
-    "title": "AraMarket | App e-commerce",
-    "description": "Plateforme interactive d'achat et de vente en cours de dévéloppement. En cliquant sur le lien vous visiterez le prototype réalisé avec Figma. Vos suggestions seront les bienvenues!",
-    "category": "mobile",
-    "technologies": ["Python", "Django", "JavaScript", "React", "SQL"],
-    "image": "img/projects/ecommerce-app.jpg",
-    "thumbnail": "img/projects/thumbnails/ecommerce-app-thumb.jpg",
-    "live_link": "https://www.figma.com/make/wkR3NMEcN1x2WCO1Q2N1NE/AraShop-Shopping-App?node-id=0-1&t=AHBWfBUz69T4cC6t-1",
+    "live_link": "https://www.figma.com/proto/7Xy1LPE8LJ0VECs5PQzPEk/Danonta?node-id=1-2&p=f&t=b2UtZwc0iPyOOzY0-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=45%3A214",
     "completion_date": "2023-11-30",
     "status": "On going",
     "features": [
