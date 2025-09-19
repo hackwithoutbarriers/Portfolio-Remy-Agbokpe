@@ -204,27 +204,24 @@ def admin_reset_password():
 def admin_dashboard():
     messages = []
     try:
-        # Vérifier si le dossier data existe
         if not os.path.exists('data'):
             os.makedirs('data')
-            flash('Dossier data créé.', 'info')
         
-        # Vérifier et lire les messages
         messages_file = 'data/messages.txt'
         if os.path.exists(messages_file):
             with open(messages_file, "r", encoding="utf-8") as f:
-                messages = [msg.strip() for msg in f if msg.strip()]
+                messages = [msg.strip() for msg in f.readlines() if msg.strip()]
         else:
-            # Créer le fichier s'il n'existe pas
+            # Créer le fichier vide
             with open(messages_file, "w", encoding="utf-8") as f:
-                pass  # Fichier vide
-            flash('Fichier messages créé.', 'info')
+                pass
             
     except Exception as e:
         app.logger.error(f'Erreur lecture messages: {str(e)}')
         flash('Erreur lors de la lecture des messages.', 'danger')
     
-    return render_template("admin.html", messages=messages)
+    # Inverser l'ordre pour avoir les messages les plus récents en premier
+    return render_template("admin.html", messages=list(reversed(messages)))
 
 @app.route("/admin/clear-messages", methods=["POST"])
 @login_required
@@ -232,15 +229,19 @@ def clear_messages():
     try:
         messages_file = 'data/messages.txt'
         if os.path.exists(messages_file):
-            os.remove(messages_file)
+            # Créer un fichier vide au lieu de supprimer
+            with open(messages_file, "w", encoding="utf-8") as f:
+                f.write("")
             app.logger.info('Tous les messages ont été effacés')
             return jsonify({"success": True, "message": "Messages effacés avec succès"})
         else:
-            return jsonify({"success": False, "message": "Aucun message à effacer"})
+            # Créer le fichier s'il n'existe pas
+            with open(messages_file, "w", encoding="utf-8") as f:
+                f.write("")
+            return jsonify({"success": True, "message": "Fichier créé, aucun message à effacer"})
     except Exception as e:
         app.logger.error(f'Erreur lors de l\'effacement des messages: {str(e)}')
         return jsonify({"success": False, "message": "Erreur lors de l'effacement"}), 500
-
 @app.route("/admin/logout")
 def admin_logout():
     session.pop('logged_in', None)

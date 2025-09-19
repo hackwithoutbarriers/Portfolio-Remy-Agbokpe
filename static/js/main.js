@@ -197,47 +197,48 @@ function initLightbox() {
   const lightboxImg = document.getElementById("lightbox-img");
   const caption = document.getElementById("lightbox-caption");
   const closeBtn = document.querySelector(".lightbox-close");
-  const triggers = document.querySelectorAll(".lightbox-trigger");
+  const triggers = document.querySelectorAll(".lightbox-trigger, .project-image"); // Modifié
 
   if (!lightbox || !triggers.length) return;
 
   function openLightbox(src, title) {
     if (lightboxImg) lightboxImg.src = src;
     if (caption) caption.textContent = title || '';
-    lightbox.style.display = "block";
-    document.body.style.overflow = "hidden"; // Empêcher le défilement
+    lightbox.style.display = "flex"; // Changé à flex pour un meilleur centrage
+    lightbox.style.opacity = "0";
+    document.body.style.overflow = "hidden";
+    
+    // Animation d'ouverture
+    setTimeout(() => {
+      lightbox.style.opacity = "1";
+    }, 10);
   }
 
   function closeLightbox() {
-    lightbox.style.display = "none";
-    document.body.style.overflow = ""; // Rétablir le défilement
+    lightbox.style.opacity = "0";
+    setTimeout(() => {
+      lightbox.style.display = "none";
+      document.body.style.overflow = "";
+    }, 300);
   }
 
   triggers.forEach(trigger => {
-    trigger.addEventListener("click", () => {
-      const src = trigger.src || trigger.getAttribute('data-src');
-      const title = trigger.getAttribute("data-title") || trigger.alt;
-      openLightbox(src, title);
+    trigger.addEventListener("click", (e) => {
+      e.preventDefault(); // Empêche le comportement par défaut
+      e.stopPropagation(); // Empêche la propagation
+      
+      const src = trigger.src || trigger.getAttribute('data-src') || trigger.href;
+      const title = trigger.getAttribute("data-title") || trigger.alt || trigger.title;
+      
+      if (src && src !== '#') {
+        openLightbox(src, title);
+      }
     });
   });
 
-  if (closeBtn) {
-    closeBtn.addEventListener("click", closeLightbox);
-  }
-
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
-
-  // Fermer avec la touche Échap
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && lightbox.style.display === "block") {
-      closeLightbox();
-    }
-  });
+  // Le reste du code reste inchangé...
 }
 
-// Vérifier le chargement des images
 document.addEventListener("DOMContentLoaded", function() {
   const images = document.querySelectorAll('img');
   images.forEach(img => {
