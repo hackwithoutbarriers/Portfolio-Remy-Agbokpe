@@ -4,7 +4,7 @@ import os
 import html
 import json
 import secrets
-from datetime import timedelta
+from datetime import datetime, timedelta
 from functools import wraps
 import logging
 from logging.handlers import RotatingFileHandler
@@ -223,25 +223,43 @@ def admin_dashboard():
     # Inverser l'ordre pour avoir les messages les plus récents en premier
     return render_template("admin.html", messages=list(reversed(messages)))
 
+@app.route("/admin/clear-messages-simple", methods=["POST"])
+@login_required
+def clear_messages_simple():
+    """Version simple sans AJAX"""
+    try:
+        messages_file = 'data/messages.txt'
+        
+        # S'assurer que le dossier data existe
+        if not os.path.exists('data'):
+            os.makedirs('data')
+            
+        # Créer un fichier vide
+        with open(messages_file, "w", encoding="utf-8") as f:
+            f.write("")
+        
+        flash('Messages effacés avec succès', 'success')
+        return redirect(url_for('admin_dashboard'))
+            
+    except Exception as e:
+        flash(f'Erreur lors de la suppression: {str(e)}', 'danger')
+        return redirect(url_for('admin_dashboard'))
+
 @app.route("/admin/clear-messages", methods=["POST"])
 @login_required
 def clear_messages():
     try:
         messages_file = 'data/messages.txt'
         if os.path.exists(messages_file):
-            # Créer un fichier vide au lieu de supprimer
-            with open(messages_file, "w", encoding="utf-8") as f:
-                f.write("")
+            os.remove(messages_file)
             app.logger.info('Tous les messages ont été effacés')
             return jsonify({"success": True, "message": "Messages effacés avec succès"})
         else:
-            # Créer le fichier s'il n'existe pas
-            with open(messages_file, "w", encoding="utf-8") as f:
-                f.write("")
-            return jsonify({"success": True, "message": "Fichier créé, aucun message à effacer"})
+            return jsonify({"success": False, "message": "Aucun message à effacer"})
     except Exception as e:
         app.logger.error(f'Erreur lors de l\'effacement des messages: {str(e)}')
         return jsonify({"success": False, "message": "Erreur lors de l'effacement"}), 500
+
 @app.route("/admin/logout")
 def admin_logout():
     session.pop('logged_in', None)
@@ -295,14 +313,6 @@ def sitemap():
 def health_check():
     return {'status': 'healthy', 'message': 'Portfolio application is running'}
 
-# Headers de sécurité
-@app.after_request
-def add_security_headers(response):
-    response.headers['X-Content-Type-Options'] = 'nosniff'
-    response.headers['X-Frame-Options'] = 'SAMEORIGIN'
-    response.headers['X-XSS-Protection'] = '1; mode=block'
-    response.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains'
-    return response
 
 # Gestion des erreurs
 @app.errorhandler(404)
@@ -324,3 +334,4 @@ if __name__ == "__main__":
     # Ne pas utiliser debug=True en production
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
