@@ -1,5 +1,3 @@
-// main.js - Version optimisée
-
 // Configuration globale
 const CONFIG = {
   alertTimeout: 3000,
@@ -197,46 +195,65 @@ function initLightbox() {
   const lightboxImg = document.getElementById("lightbox-img");
   const caption = document.getElementById("lightbox-caption");
   const closeBtn = document.querySelector(".lightbox-close");
-  const triggers = document.querySelectorAll(".lightbox-trigger, .project-image"); // Modifié
+  const triggers = document.querySelectorAll(".lightbox-trigger");
 
   if (!lightbox || !triggers.length) return;
 
   function openLightbox(src, title) {
-    if (lightboxImg) lightboxImg.src = src;
-    if (caption) caption.textContent = title || '';
-    lightbox.style.display = "flex"; // Changé à flex pour un meilleur centrage
-    lightbox.style.opacity = "0";
-    document.body.style.overflow = "hidden";
+    // Vérifier si l'image existe avant d'ouvrir la lightbox
+    if (!src) {
+      console.error("Source d'image manquante");
+      return;
+    }
     
-    // Animation d'ouverture
-    setTimeout(() => {
-      lightbox.style.opacity = "1";
-    }, 10);
+    // Précharger l'image pour vérifier qu'elle existe
+    const testImage = new Image();
+    testImage.onload = function() {
+      if (lightboxImg) lightboxImg.src = src;
+      if (caption) caption.textContent = title || '';
+      lightbox.style.display = "block";
+      document.body.style.overflow = "hidden";
+    };
+    testImage.onerror = function() {
+      console.error("Image non trouvée:", src);
+      alert("L'image n'est pas disponible pour le moment.");
+    };
+    testImage.src = src;
   }
 
   function closeLightbox() {
-    lightbox.style.opacity = "0";
-    setTimeout(() => {
-      lightbox.style.display = "none";
-      document.body.style.overflow = "";
-    }, 300);
+    lightbox.style.display = "none";
+    document.body.style.overflow = "";
   }
 
   triggers.forEach(trigger => {
     trigger.addEventListener("click", (e) => {
-      e.preventDefault(); // Empêche le comportement par défaut
-      e.stopPropagation(); // Empêche la propagation
-      
-      const src = trigger.src || trigger.getAttribute('data-src') || trigger.href;
+      e.preventDefault(); // Empêcher le comportement par défaut
+      const src = trigger.src || trigger.getAttribute('data-src') || trigger.getAttribute('href');
       const title = trigger.getAttribute("data-title") || trigger.alt || trigger.title;
       
+      // Vérifier que nous avons une source valide
       if (src && src !== '#') {
         openLightbox(src, title);
+      } else {
+        console.error("Source d'image invalide:", src);
       }
     });
   });
 
-  // Le reste du code reste inchangé...
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeLightbox);
+  }
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightbox.style.display === "block") {
+      closeLightbox();
+    }
+  });
 }
 
 document.addEventListener("DOMContentLoaded", function() {
